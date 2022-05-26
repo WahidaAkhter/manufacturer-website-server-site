@@ -4,7 +4,7 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading';
-
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
 

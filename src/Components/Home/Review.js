@@ -4,7 +4,7 @@ const Review = ({review}) => {
   return (
       <div className="card w-96 bg-base-100 shadow-xl">
             <div className="card-body">
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <p>their service is too good</p>
             <div className="flex items-center">
 
              <div className="avatar">
