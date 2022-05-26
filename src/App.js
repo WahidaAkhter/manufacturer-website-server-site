@@ -8,6 +8,7 @@ import Login from './Components/Login/Login';
 import Purchase from './Components/Purchase/Purchase';
 import SignUp from './Components/Login/SignUp';
 import RequireAuth from './Components/Login/RequireAuth';
+import Summary from './Components/Home/Summary';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         } />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<SignUp/>} />
+        <Route path="/summary" element={<Summary/>} />
+
       </Routes>
     </div>
   );
