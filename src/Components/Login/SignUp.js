@@ -18,6 +18,7 @@ const SignUp = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [token]  = useToken(user || gUser);
 
     const navigate = useNavigate();
 
@@ -38,6 +39,9 @@ const SignUp = () => {
             await createUserWithEmailAndPassword(data.email, data.password);
             await updateProfile({ displayName: data.name });
            
+        }
+   
+        if (token) {
             navigate('/purchase');
         }
 
