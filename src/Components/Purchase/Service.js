@@ -13,7 +13,7 @@ const Service = ({service,setPurchase}) => {
                     {
                         slots.length > 0
                         ? <span>{slots[0]}</span>
-                        : <span className='text-red-500'>No products available</span>
+                        : <span className='text-red-500'>No Slots available</span>
                     }
                 </p>
                 <p>description:{description}</p>

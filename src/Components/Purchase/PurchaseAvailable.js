@@ -28,7 +28,11 @@ import Service from './Service';
                 ></Service>)
             }
         </div>
-        {purchase && <Modal purchase={purchase}></Modal>}
+        {purchase && <Modal 
+        date={date} 
+        purchase={purchase}
+        setPurchase={setPurchase}
+        ></Modal>}
     </div>
   )
 }
