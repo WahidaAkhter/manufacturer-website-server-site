@@ -9,7 +9,7 @@ import Service from './Service';
     const [purchase,setPurchase]=useState(null);
 
         useEffect(()=>{
-            fetch('Services.json')
+            fetch('http://localhost:5000/service')
             .then(res=>res.json())
             .then(data=>setServices(data))
         },[])
