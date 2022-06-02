@@ -5,30 +5,36 @@ import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 
 const Modal = ({date,purchase,setPurchase}) => {
-    const{name,slots}=purchase;
+    const{name}=purchase;
     const formattedDate=format(date,'PP');
     const [user, loading, error] = useAuthState(auth);
 
    const handlePurchase=event=>{
      event.preventdefault();
      console.log(name);
-     const purchase = {
-                        purchase: name,
+     const purchaseModal = {
+      purchaseModal: name,
                         date:formattedDate,
                         customer:user.email,
                         customerName:user.displayName,
                         phone:event.target.phone.value
                       }
 
-                      fetch('http://localhost:5000/purchase',{
+                      fetch('http://localhost:5000/purchaseModal',{
                         method:'POST',
                         headers:{
                           'content-type':'application/json'
                         },
-                        body:JSON.stringify(purchase)
+                        body:JSON.stringify(purchaseModal)
                       })
                       .then(res => res.json())
                       .then(data =>{
+                        if(data.success){
+                          toast(`purchase is set,${formattedDate}`)
+                        }
+                        else{
+                          toast.error(`purchased already,${data.purchaseModal?.date}`)
+                        }
                         setPurchase(null);
                       })
    
