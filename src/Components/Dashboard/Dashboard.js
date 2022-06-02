@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
-
+import useAdmin from '../../hooks/useAdmin';
 const Dashboard = () => {
   return (
     <div class="drawer drawer-mobile">
@@ -18,6 +18,7 @@ const Dashboard = () => {
         <li><Link to="/dashboard">My Items</Link></li>
         <li><Link to="/dashboard/review">My Reviews</Link></li>
         <li><Link to="/dashboard/history">My History</Link></li>
+        { admin && <li><Link to="/dashboard/users">All Users</Link></li>}
       </ul>
     
     </div>
