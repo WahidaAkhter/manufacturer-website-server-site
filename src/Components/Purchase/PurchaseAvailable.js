@@ -7,9 +7,9 @@ import Service from './Service';
 
     const [services,setServices]=useState([]);
     const [purchase,setPurchase]=useState(null);
-
+    const formattedDate = format(date, 'PP');
         useEffect(()=>{
-            fetch('http://localhost:5000/service')
+            fetch(`http://localhost:5000/available?date=${formattedDate} `)
             .then(res=>res.json())
             .then(data=>setServices(data))
         },[])
