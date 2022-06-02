@@ -9,6 +9,8 @@ import Purchase from './Components/Purchase/Purchase';
 import SignUp from './Components/Login/SignUp';
 import RequireAuth from './Components/Login/RequireAuth';
 import Summary from './Components/Home/Summary';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
         <Route path="/summary" element={<Summary/>} />
 
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
