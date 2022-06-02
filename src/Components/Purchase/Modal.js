@@ -5,11 +5,19 @@ import auth from '../../firebase.init';
 
 const Modal = ({date,purchase,setPurchase}) => {
     const{name,slots}=purchase;
+    const formattedDate=format(date,'PP');
     const [user, loading, error] = useAuthState(auth);
 
    const handlePurchase=event=>{
      event.preventdefault();
      console.log(name);
+     const purchase = {
+                        purchase: name,
+                        date:formattedDate,
+                        customer:user.email,
+                        customerName:user.displayName,
+                        phone:event.target.phone.value
+                      }
      setPurchase(null);
    }
 
