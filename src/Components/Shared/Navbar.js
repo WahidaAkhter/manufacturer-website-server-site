@@ -17,6 +17,9 @@ const menuItems=<>
           <li><Link to="/purchase">Purchase </Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/summary">Business Summary</Link></li>
+          {
+            user && <li><Link to="/dashboard">Dashboard</Link></li>
+         }
           <li>{user ? <button className="btn btn-ghost"  onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
 </>
   return (
