@@ -3,6 +3,10 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
 import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import CheckoutForm from './CheckoutForm';
+
+const stripePromise = loadStripe('pk_test_51L6SEHF4qdXzE71Fe7yMSTGulnHNnNGGR1tWxMdpnL9Y2Vugrzqj3EpVZKHRxMEOcbOTuiQHUGLz8onoBC52tvNw00oagBfr93');
 const Payment = () => {
     const { id } = useParams();
     const url = `http://localhost:5000/purchaseModal/${id}`;
