@@ -22,7 +22,7 @@ const Modal = ({date,purchase,setPurchase}) => {
                         phone:event.target.phone.value
                       }
 
-                      fetch('http://localhost:5000/purchaseModal',{
+                      fetch('https://murmuring-spire-36449.herokuapp.com/purchaseModal',{
                         method:'POST',
                         headers:{
                           'content-type':'application/json'

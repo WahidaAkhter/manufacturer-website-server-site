@@ -9,7 +9,7 @@ import Service from './Service';
     const [purchase,setPurchase]=useState(null);
     const formattedDate = format(date, 'PP');
         useEffect(()=>{
-            fetch(`http://localhost:5000/available?date=${formattedDate} `)
+            fetch(`https://murmuring-spire-36449.herokuapp.com/available?date=${formattedDate} `)
             .then(res=>res.json())
             .then(data=>setServices(data))
         },[formattedDate])

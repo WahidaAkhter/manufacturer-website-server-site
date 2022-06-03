@@ -16,6 +16,8 @@ import MyItem from './Components/Dashboard/MyItem';
 import MyReview from './Components/Dashboard/MyReview';
 import MyHistory from './Components/Dashboard/MyHistory';
 import Payment from './Components/Dashboard/Payment';
+import Blog from './Components/Home/Blog';
+import MyPortfolio from './Components/Home/MyPortfolio';
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
    <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />
+        <Route path="/blog" element={<Blog/>} />
+        <Route path="/myportfolio" element={<MyPortfolio/>} />
+
         <Route path="/purchase" element={
           <RequireAuth>
             <Purchase />

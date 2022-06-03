@@ -13,7 +13,7 @@ const CheckoutForm = ({item}) => {
     const { id, price, customer, customerName } = item;
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://murmuring-spire-36449.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -80,7 +80,7 @@ const CheckoutForm = ({item}) => {
                 item: id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/purchaseModal/${id}`, {
+            fetch(`https://murmuring-spire-36449.herokuapp.com/purchaseModal/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

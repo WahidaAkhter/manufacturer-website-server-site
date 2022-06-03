@@ -9,7 +9,7 @@ import CheckoutForm from './CheckoutForm';
 const stripePromise = loadStripe('pk_test_51L6SEHF4qdXzE71Fe7yMSTGulnHNnNGGR1tWxMdpnL9Y2Vugrzqj3EpVZKHRxMEOcbOTuiQHUGLz8onoBC52tvNw00oagBfr93');
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/purchaseModal/${id}`;
+    const url = `https://murmuring-spire-36449.herokuapp.com/purchaseModal/${id}`;
     
     const { data: item, isLoading } = useQuery(['purchaseModal', id], () => fetch(url, {
         method: 'GET',

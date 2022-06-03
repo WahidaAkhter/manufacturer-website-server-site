@@ -10,7 +10,7 @@ const MyItem = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/purchaseModal?customer=${user.email}`,{
+            fetch(`https://murmuring-spire-36449.herokuapp.com/purchaseModal?customer=${user.email}`,{
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
