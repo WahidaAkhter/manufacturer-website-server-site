@@ -5,7 +5,7 @@ import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 
 const Modal = ({date,purchase,setPurchase}) => {
-    const{name}=purchase;
+    const{id,name,price}=purchase;
     const formattedDate=format(date,'PP');
     const [user, loading, error] = useAuthState(auth);
 
@@ -13,8 +13,10 @@ const Modal = ({date,purchase,setPurchase}) => {
      event.preventdefault();
      console.log(name);
      const purchaseModal = {
-      purchaseModal: name,
+                        purchaseModalId:id,
+                        purchaseModal: name,
                         date:formattedDate,
+                        price,
                         customer:user.email,
                         customerName:user.displayName,
                         phone:event.target.phone.value

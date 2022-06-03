@@ -15,6 +15,7 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import MyItem from './Components/Dashboard/MyItem';
 import MyReview from './Components/Dashboard/MyReview';
 import MyHistory from './Components/Dashboard/MyHistory';
+import Payment from './Components/Dashboard/Payment';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route index element={<MyItem/>}></Route>
           <Route path="review" element={<MyReview/>}></Route>
           <Route path="history" element={<MyHistory/>}></Route>
+          <Route path="payment/:id" element={<Payment/>}></Route>
           </Route>
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<SignUp/>} />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 const MyItem = () => {
     const [items, setItems] = useState([]);
@@ -45,6 +45,7 @@ const MyItem = () => {
                             <th>Date</th>
                             <th>Time</th>
                             <th>Purchase</th>
+                            <th>Payment</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,6 +56,13 @@ const MyItem = () => {
                                 <td>{a.date}</td>
                                 <td>{a.slot}</td>
                                 <td>{a.purchase}</td>
+                                <td>
+                                    {(a.price && !a.paid) && <Link to={`/dashboard/payment/${a._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
+                                    {(a.price && a.paid) && <div>
+                                        <p><span className='text-success'>Paid</span></p>
+                                        <p>Transaction id: <span className='text-success'>{a.transactionId}</span></p>
+                                    </div>}
+                                </td>
                             </tr>)
                         }
                         
