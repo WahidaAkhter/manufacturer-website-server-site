@@ -7,19 +7,19 @@ const MyPortfolio = () => {
        <h2>email:wahidacse280@gmail.com</h2>
        <h2>education:2nd year university student of computer science and engineering department</h2>
        <h2>techonologies i have used:
-           1.mongodb atlas
-           2.react
-           3.react-router
-           4.javascript
-           5.express
-           6.daisyui
-           7.css
-           8.heroku
+           1.mongodb atlas  <br />
+           2.react <br />
+           3.react-router <br />
+           4.javascript <br />
+           5.express <br />
+           6.daisyui <br />
+           7.css <br />
+           8.heroku <br />
        </h2>
        <h2>my recent three projects:
-           1.https://books-inventory-42ccf.web.app/
-           2.https://weattle.netlify.app/
-           3.https://bike-rent-app.netlify.app/
+           1.https://books-inventory-42ccf.web.app/ <br />
+           2.https://weattle.netlify.app/ <br />
+           3.https://bike-rent-app.netlify.app/ <br />
        </h2>
     </div>
   )
