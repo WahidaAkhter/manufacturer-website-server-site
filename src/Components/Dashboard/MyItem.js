@@ -50,7 +50,7 @@ const MyItem = () => {
                     </thead>
                     <tbody>
                         {
-                            items.map((a, index) =><tr>
+                            items.map((a, index) =><tr key={a.id}>
                                 <th>{index + 1}</th>
                                 <td>{a.customerName}</td>
                                 <td>{a.date}</td>

@@ -58,8 +58,8 @@ const CheckoutForm = ({item}) => {
                 payment_method: {
                     card: card,
                     billing_details: {
-                        name: patientName,
-                        email: patient
+                        name: customerName,
+                        email: customer
                     },
                 },
             },
