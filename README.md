@@ -20,7 +20,7 @@ React Day Picker – Date picker for scheduling and inputs
 
 Firebase Hosting – Deployment and live hosting solution
 
-# 🏭 Warbitor – Manufacturing App (MERN + Firebase + Stripe)
+# 🏭 Warbitor – Manufacturing App (MERN + Firebase)
 
 Developed a full-featured React.js frontend with dynamic routing using React Router v6
 
